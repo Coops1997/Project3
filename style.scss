@@ -1,0 +1,55 @@
+$primarybtn: purple;
+$btncolor: white;
+$textcolor: black;
+$color: white;
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    .logo{
+      width: 100%;
+      align-items: center;
+      height: 35px;
+    }
+    .location{
+        align-items: center;
+        background-color: grey;
+    }
+    button{
+        background-color: $primarybtn;
+        color: $btncolor;
+    }
+}
+
+section {
+    background-color: $color;
+    color: $textcolor;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .choose_element{
+        display: flex;
+        flex-direction: row;
+        width:80%;
+        padding:10px;
+        margin: 10px 0 0 10px;
+    }
+    .create_element{
+        display: flex;
+        flex-direction: row;
+        width:80%;
+        padding:10px;
+        margin: 10px 0 0 10px;
+    }
+    .enjoy_element{
+        display: flex;
+        flex-direction: row;
+        width:80%;
+        padding:10px;
+        margin: 10px 0 0 10px;
+    }
+    
+}
