@@ -6,30 +6,50 @@ $color: white;
 header {
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color:black;
+    
     .logo{
-      width: 100%;
-      align-items: center;
-      height: 35px;
-    }
-    .location{
+        width: 100%;
         align-items: center;
-        background-color: grey;
-    }
-    button{
-        background-color: $primarybtn;
-        color: $btncolor;
-    }
-}
-
-section {
+        justify-content: center;
+        height: 35px;
+        padding: 20px 10px 20px 10px;
+      }
+      #location{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 2px;
+          background-color: lightgray;
+      }
+  
+  
+      button{
+          width: 300px;
+          height: 50px;
+          align-items: center;
+          border-radius: 30%;
+          background-color: $primarybtn;
+          color: $btncolor;
+      }
+  }
+  
+  section {
     background-color: $color;
     color: $textcolor;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 20px;
+
+    .explanation_part{
+        padding:30px;
+        width:100%;
+        align-items: center;
+    }
     .choose_element{
         display: flex;
         flex-direction: row;
@@ -51,5 +71,46 @@ section {
         padding:10px;
         margin: 10px 0 0 10px;
     }
+}
     
+    #res_title{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        color: $textcolor;
+        padding: 20px;
+
+        .res_title_icon {
+          padding:10px;
+          margin: 5px;
+        }
+    
+    }
+
+    #listings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: 100%;
+        grid-gap: 25px;
+        margin: 20px;
+        padding: 30px;
+    
+    .restaurant_listing{
+        display: flex;
+        flex-direction: column;
+        color:$textcolor;
+    }
+
+    }
+
+
+    .list_card{
+        margin:0;
+        padding: 20px;
+        background-color: white;
+    }
+    
+   
+   
 }
