@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -39,20 +38,21 @@
     </div>
 
     <main>
-        <section>
-            <div id="Explanation">
-                <div class="explanation_part"><span class="explanation_title">How it works</span></div>
+        <section class="steps">
+            <h1 class="explanation_part">How it works</h1>
                <div class="choose_element">
-                   <i class="fa fa-mobile"></i>
-                   <p>Choose a restaurant</p>
+                   <div class="step"><span class="step--number">1</span>
+                     <span><i class="fa fa-mobile-alt"></i></span>Choose a restaurant</div>
                </div>
-               <div class="create_element"></div>
-                   <i class="fa fa-list"></i>
-                   <p>Create your menu</p>
-               <div class="enjoy_element">
-                   <i class="fa fa-trophy"></i>
-                   <p>Go enjoy it at the restaurant</p>
-               </div>
+
+            <div class="create_element">
+                <div class="step"><span class="step--number">2</span>
+                    <span><i class="fa fa-list"></i></span>Create your menu</div>
+            </div>
+            
+            <div class="enjoy_element">
+                <div class="step"><span class="step--number">3</span>
+                  <span><i class="fa fa-trophy"></i></span>Go enjoy it at the restaurant</div>
             </div>
 
             <div id="res_title">
@@ -68,16 +68,24 @@
                     <div class="list_card_name">
                       <h3><strong>The Full Palette</strong></h3>
                         <p class="location">New York</p>
+                        <span class="heart">
+                            <span class="heart--empty"><i class="fas fa-heart"></i></span>
+                        </span>
+                        <span class="new_box">New</span>
                     </div>
                 </a>
             </article>
 
             <article class="list_card">    
               <a href="pages/enchanted_plate">
-                 <img class="res_image2" alt="The_enchanted_plate" src="images/restaurants/res2.jpg" width="200" height="100" ></img>
+                 <img class="res_image2" alt="The_Enchanted_plate" src="images/restaurants/res2.jpg" width="200" height="100" ></img>
                    <div class="list_card_name">
                      <h3><strong>The Enchanted Plate</strong></h3>
                         <p class="location">New York</p>
+                        <span class="heart">
+                            <span class="heart--coloured"><i class="fas fa-heart"></i></span>
+                        </span>
+                        <span class="new_box">New</span>
                    </div>
               </a>
             </article>
@@ -88,6 +96,9 @@
                       <div class="list_card_name">
                          <h3><strong>Bastille</strong></h3>
                             <p class="location">New York</p>
+                            <span class="heart">
+                                <span class="heart--empty"><i class="fas fa-heart"></i></span>
+                            </span>
                       </div>
                 </a>
             </article>
@@ -98,6 +109,9 @@
                     <div class="list_card_name">
                      <h3><strong>Le Gourmand</strong></h3>
                             <p class="location">New York</p>
+                            <span class="heart">
+                                <span class="heart--empty"><i class="fas fa-heart"></i></span>
+                            </span>
                     </div>
                 </a>
             </article>
