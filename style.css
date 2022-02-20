@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+header #logo_box {
+  width: 100%;
+  align-items: center;
+}
+header .logo {
+  height: 35px;
+  margin: 15px 0 0 15px;
+}
+header #location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgray;
+}
+header #intro {
+  display: flex;
+  flex-direction: column;
+}
+header .intro_title {
+  padding: 5px;
+  align-items: center;
+}
+header .intro_heading {
+  padding: 10px;
+}
+header .button {
+  width: 300px;
+  height: 50px;
+  align-items: center;
+  border-radius: 30%;
+  background-color: purple;
+  color: white;
+}
+
+section {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+section .explanation_part {
+  padding: 30px;
+  width: 100%;
+  align-items: center;
+}
+section .choose_element {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+}
+section .create_element {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+}
+section .enjoy_element {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+}
+section #res_title {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: black;
+  padding: 20px;
+}
+section .res_title_icon {
+  padding: 10px;
+  margin: 5px;
+}
+section #listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-template-columns: 100%;
+  grid-gap: 25px;
+  margin: 20px;
+  padding: 30px;
+}
+section .list_card {
+  margin: 0;
+  padding: 20px;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
