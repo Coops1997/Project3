@@ -31,7 +31,8 @@ header {
     
       .logo {
         height: 35px;
-        margin: 15px 0 0 15px;
+        margin: 15px;
+        padding: 5px;
       }
       #location{
           display: flex;
@@ -40,30 +41,43 @@ header {
           background-color: lightgray;
       }
 
+      #location i{
+        padding:5px;
+        margin-left: 100px;
+        
+      }
+
       #intro{
           display:flex;
           flex-direction: column;
       }
 
       .intro_title{
-          padding: 5px;
+          padding: 20px;
           align-items: center;
+          margin-left: 50px;
+          margin-right: 50px;
       }
 
       .intro_heading{
           padding:10px;
-
+          margin-left: 60px;
+          margin-right: 60px;
+          align-items: center;
       }
 
       #explore_button{
-          
+          display: flex;
+          flex-flow: row wrap;
+          padding: 10px
       }
   
       .button{
           width: 300px;
-          height: 50px;
+          height: 80px;
           align-items: center;
-          border-radius: 30%;
+          margin: 25px;
+          border-radius: 40%;
           background-color: $primarybtn;
           color: $btncolor;
       }
@@ -125,11 +139,12 @@ header {
         width: 80%;
         color: $textcolor;
         padding: 20px;
+        margin-top: 20px;
     }
 
         .res_title_icon {
-          padding:10px;
-          margin: 5px;
+          padding:0px;
+          margin: 0px;
         }
 
 
@@ -137,10 +152,8 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        grid-template-columns: 100%;
-        grid-gap: 25px;
-        margin: 20px;
-        padding: 30px;
+        margin-top: -10px;
+        border-radius: 15px;
     }
 
     .list_card{
@@ -149,23 +162,26 @@ header {
         background-color: white;
     }
 
-    .res_image1{
-
-    }
-
     .list_card_name{
-
+        margin-top: 5px;
+        text-align: left;
     }
 
     .location{
-
+       text-align: left;
+       margin-top: -10px;
     }
 
-    .heart{
 
-    }
-
-    .new_box{
-
-    }
   }
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+}
