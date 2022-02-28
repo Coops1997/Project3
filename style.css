@@ -1,4 +1,15 @@
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+}
+
 header {
   background-color: white;
   display: flex;
@@ -7,25 +18,52 @@ header {
   align-items: center;
   color: black;
 }
-header .logo {
+header #logo_box {
   width: 100%;
   align-items: center;
-  justify-content: center;
+}
+header .logo {
   height: 35px;
-  padding: 20px 10px 20px 10px;
+  margin: 15px;
+  padding: 5px;
 }
 header #location {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2px;
   background-color: lightgray;
 }
-header button {
-  width: 300px;
-  height: 50px;
+header #location i {
+  padding: 5px;
+  margin-left: 100px;
+}
+header #intro {
+  display: flex;
+  flex-direction: column;
+}
+header .intro_title {
+  padding: 20px;
   align-items: center;
-  border-radius: 30%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+header .intro_heading {
+  padding: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  align-items: center;
+}
+header #explore_button {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
+header .button {
+  width: 300px;
+  height: 80px;
+  align-items: center;
+  margin: 25px;
+  border-radius: 40%;
   background-color: purple;
   color: white;
 }
@@ -64,35 +102,46 @@ section .enjoy_element {
   padding: 10px;
   margin: 10px 0 0 10px;
 }
-
-#res_title {
+section #res_title {
   display: flex;
   flex-direction: column;
   width: 80%;
   color: black;
   padding: 20px;
+  margin-top: 20px;
 }
-#res_title .res_title_icon {
-  padding: 10px;
-  margin: 5px;
+section .res_title_icon {
+  padding: 0px;
+  margin: 0px;
 }
-
-#listings {
+section #listings {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-template-columns: 100%;
-  grid-gap: 25px;
-  margin: 20px;
-  padding: 30px;
+  margin-top: -10px;
+  border-radius: 15px;
 }
-#listings .restaurant_listing {
-  display: flex;
-  flex-direction: column;
-  color: black;
-}
-#listings .list_card {
+section .list_card {
   margin: 0;
   padding: 20px;
   background-color: white;
+}
+section .list_card_name {
+  margin-top: 5px;
+  text-align: left;
+}
+section .location {
+  text-align: left;
+  margin-top: -10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10;
 }/*# sourceMappingURL=style.css.map */
