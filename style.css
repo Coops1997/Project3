@@ -11,35 +11,37 @@ body {
 }
 
 header {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
+  padding: 0;
 }
 header #logo_box {
-  width: 100%;
+  width: 70%;
   align-items: center;
 }
 header .logo {
-  height: 35px;
-  margin: 15px;
-  padding: 5px;
+  height: 30px;
+  margin-left: 25%;
+  padding: 8px;
 }
 header #location {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
   background-color: lightgray;
 }
 header #location i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 5px;
-  margin-left: 100px;
+  margin-left: 25%;
+}
+header #location i p {
+  padding: 0 0 0 15px;
 }
 header #intro {
   display: flex;
   flex-direction: column;
+  background-color: #f0e3e3;
 }
 header .intro_title {
   padding: 20px;
@@ -49,9 +51,13 @@ header .intro_title {
 }
 header .intro_heading {
   padding: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 55px;
+  margin-right: 55px;
   align-items: center;
+}
+header p {
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 header #explore_button {
   display: flex;
@@ -62,9 +68,9 @@ header .button {
   width: 300px;
   height: 80px;
   align-items: center;
-  margin: 25px;
-  border-radius: 40%;
-  background-color: purple;
+  margin: 5px 5px 15px 40px;
+  border-radius: 50px;
+  background-color: #a849a8;
   color: white;
 }
 
@@ -72,76 +78,167 @@ section {
   background-color: white;
   color: black;
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
+  padding: 10px;
+}
+section .steps {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  padding: 10px;
   margin: 20px;
 }
-section .explanation_part {
-  padding: 30px;
-  width: 100%;
-  align-items: center;
-}
 section .choose_element {
+  border: 1px solid #0a0a0a;
+  min-width: 300px;
+  min-height: 50px;
+  margin-right: 25px;
+  border-radius: 25px;
+  padding-right: 10px;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0 0 10px;
 }
 section .create_element {
+  border: 1px solid #0a0a0a;
+  min-width: 300px;
+  min-height: 50px;
+  margin-top: 12px;
+  margin-right: 25px;
+  border-radius: 25px;
+  padding-right: 10px;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0 0 10px;
 }
 section .enjoy_element {
+  border: 1px solid #0a0a0a;
+  min-width: 300px;
+  min-height: 50px;
+  margin-top: 12px;
+  margin-right: 25px;
+  border-radius: 25px;
+  padding-right: 10px;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0 0 10px;
 }
-section #res_title {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  color: black;
-  padding: 20px;
-  margin-top: 20px;
-}
-section .res_title_icon {
-  padding: 0px;
-  margin: 0px;
-}
-section #listings {
-  display: flex;
-  flex-direction: column;
+
+section {
+  text-align: left;
   align-items: center;
-  margin-top: -10px;
-  border-radius: 15px;
 }
-section .list_card {
+
+.restaurants {
+  width: 100%;
+  margin-top: 25px;
+  padding: 5px;
+  background: lightgrey;
+}
+.restaurants h2 {
+  padding: 1.4rem 0;
+}
+.restaurants h4 {
+  font-weight: normal;
+}
+.restaurants__wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+.restaurants__card {
+  position: relative;
+}
+.restaurants__card a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  height: 250px;
+  width: 100%;
+  box-shadow: black;
+  border-radius: 5px;
+  justify-content: center;
+  /*positioning of picture with bigger height*/
+}
+.restaurants__card a img {
+  height: 175px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+.restaurants__card a #tall-picture {
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+.restaurants__card .fa-heart {
+  position: relative;
+  right: 2rem;
+  bottom: 1, 2rem;
+  font-size: 1.3rem;
+  z-index: 5px;
+}
+.restaurants__card .fa-heart.empty {
+  color: white;
+}
+.restaurants__card .fa-heart.full {
+  opacity: red;
+}
+.restaurants__card .fa-heart.empty:hover {
+  cursor: auto;
+  color: red;
+}
+.restaurants__card .fa-heart.full:hover {
+  cursor: auto;
+  color: yellow;
+  background: white;
+  background-clip: padding-box;
+  transition: width 2s;
+  opacity: 4px;
+}
+.restaurants__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  background: black;
+  height: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.restaurants__name h3, .restaurants__name h4 {
   margin: 0;
-  padding: 20px;
-  background-color: white;
 }
-section .list_card_name {
-  margin-top: 5px;
-  text-align: left;
-}
-section .location {
-  text-align: left;
-  margin-top: -10px;
+.restaurants_new {
+  position: relative;
+  right: 0.8rem;
+  top: 0.8rem;
+  background-color: green;
+  color: black;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
 }
 
 footer {
   display: flex;
   flex-direction: column;
+  background-color: #5f5151;
+  color: white;
 }
-
-ul {
+footer .Logo {
+  align-items: left;
+  max-width: 120px;
+  max-height: 150px;
+  margin: 20px;
+}
+footer ul {
   list-style-type: none;
-  margin: 0;
-  padding: 10;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */
