@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 #wrapper {
@@ -126,11 +127,13 @@ section .enjoy_element {
 
 section {
   text-align: left;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .restaurants {
   width: 100%;
+  text-align: left;
   margin-top: 25px;
   padding: 5px;
   background: lightgrey;
@@ -212,7 +215,7 @@ section {
   margin: 0;
 }
 .restaurants_new {
-  position: relative;
+  position: absolute;
   right: 0.8rem;
   top: 0.8rem;
   background-color: green;
@@ -233,6 +236,8 @@ footer .Logo {
   max-width: 120px;
   max-height: 150px;
   margin: 20px;
+  -webkit-print-color-adjust: white;
+          color-adjust: white;
 }
 footer ul {
   list-style-type: none;
