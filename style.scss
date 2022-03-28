@@ -4,14 +4,13 @@ $textcolor: black;
 $color: white;
 $padding-main: 5px;
 $backgroung-color-2: lightgrey;
+$icon-colour: black;
 
 body {
     width: 100%;
     height: 100%;
     margin: auto;
     margin-top: 0;
-    //margin: 0;
-    //padding: 0;
     position: relative;
     
 }
@@ -37,7 +36,7 @@ header {
         padding: 8px;
       }
       #location{
-          border: 1px solid black;
+          border: 1px solid grey;
           text-align: center;
           position: relative;
           background-color: lightgray;
@@ -59,7 +58,7 @@ header {
       #intro{
           display:flex;
           flex-direction: column;
-          background-color: rgb(240, 227, 227);
+          background-color: rgb(236, 228, 228);
       }
 
       .intro_title{
@@ -99,51 +98,43 @@ header {
     
   }
   
-  section {
-    background-color: $color;
-    color: $textcolor;
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    padding:10px;
+ 
     
 
 //SECTION - HOW IT WORKS     
       
-.how-it-works{ //remane the section to this - "How it works"
+.how-it-works{
       padding: $padding-main;
       h2 {          
-        padding: 1rem 0;      
+        padding: 0.4rem 1.2rem;      
       }
     
-      &__wrap {
-          @include media-steps;
+      &_wrap {
           display: flex;
           flex-direction: column;
       }
     
-      &__steps{
-        @include media-steps-size;
+      &_steps{
         display: flex;
         flex-direction: row;
         align-items: center;
-        background: $background-colour-2;
+        background: blue;
         border-radius: 1.5rem;
-        box-shadow: $shadow;
+        box-shadow: 0.5rem;
         position: relative;
-        //flex-flow: wrap;
         margin: 0.7rem 0 0.7rem 0.6rem;
         padding: 1.5rem 0;
+      }
           
           & .numbers {
               width: 1.5rem;
               height: 1.5rem;
               text-align: center;
-              background: $primary-colour;
-              colour: white;
+              background: purple;
+              color: white;
               border-radius: 2rem;
               position: relative;
-              left: -0.6rem;
+              left: 0;
               padding: 0.2rem 0.1rem 0 0;
           
           }
@@ -151,6 +142,7 @@ header {
           & .icon {
               width: 1.5rem;
               margin: 0 1rem;
+              padding:0rem;
               color: $icon-colour; //set this globally
               font-size: 1.1rem;
           }
@@ -160,18 +152,19 @@ header {
           }
           
           & :hover{
-              background-colour: lighten ($primary-colour, 40%);
+              background-color: lighten (blue, 40%);
               cursor: pointer;
           }
           
           & :hover > .icon{
-              background-colour: $primary-colour;
+              background-color: blue;
           }
         
     }
 
     .choose_element{
         border: 1px solid  #0a0a0a;
+        background-color: rgb(226, 221, 221);
         min-width: 300px;
         min-height: 50px;
         margin-right: 25px;
@@ -184,6 +177,7 @@ header {
 
     .create_element{
         border: 1px solid  #0a0a0a;
+        background-color: rgb(226, 221, 221);
         min-width: 300px;
         min-height: 50px;
         margin-top: 12px;
@@ -196,6 +190,7 @@ header {
     }
     .enjoy_element{
         border: 1px solid  #0a0a0a;
+        background-color: rgb(226, 221, 221);
         min-width: 300px;
         min-height: 50px;
         margin-top: 12px;
@@ -206,7 +201,7 @@ header {
         display: flex;
         flex-direction: row;
     }
-  }
+  
 
       
 //SECTION - RESTAURANTS    
@@ -236,68 +231,72 @@ header {
         }
         &__card{
             position: relative;
-    
+        }
             a{
                 display: flex;
                 flex-direction: column;
                 text-decoration: none;
                 color: black;
+                margin: 2rem;
                 height: 250px;
-                width: 100%;
-                box-shadow: black;
-                border-radius: 5px;
+                width: 80%;
+                border: 0.1rem solid white;
+                border-radius: 25px;
+                background-color: white;
                 justify-content: center;
-                    img{
-                        height: 175px;
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 5px;
-                        margin-bottom: 0px;
+            }
+            
+        
+                img{
+                    height: 175px;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    margin-bottom: 0px;
                     }
                     /*positioning of picture with bigger height*/
                     #tall-picture{
                         object-position: 0 60%;
                     }
     
-    }
-            .fa-heart{
-                position: relative;
-                right: 2rem;
-                bottom: 1,2rem;
-                font-size: 1.3rem;
-                z-index: 5px;
-                &.empty{
-                    color: white;
-                }
-                &.full{
-                    opacity: red;
-                }
-                &.empty:hover{
-                    cursor: auto;
-                    color: red;
-                }
-                &.full:hover{
-                    cursor: auto;
-                    color: yellow;
-                    background:white;
-                    background-clip: padding-box;
-                    transition: width 2s;
-                    opacity: 4px;
+
+                    .fa-heart{
+                        position: absolute;
+                        right: 2rem;
+                        bottom: 1,2rem;
+                        font-size: 1.3rem;
+                        z-index: 5px;
+                        &.empty{
+                            color:white;
+                        }
+                        &.full{
+                            opacity: red;
+                        }
+                        &.empty:hover{
+                            cursor: auto;
+                            color: red;
+                        }
+                        &.full:hover{
+                            cursor: auto;
+                            color: yellow;
+                            background:white;
+                            background-clip: padding-box;
+                            transition: width 2s;
+                            opacity: 4px;
+                            }
                     }
-            }
-        }
+        
     
-        &__name{
+        &_name{
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: left;
             position: relative;
-            background: black;
-            height: 10px;
+            background: white;
             border-radius: 5px;
-            padding: 10px;
+            padding: 5px;
             & h3, h4{
-                margin: 0;
+                margin-left: 0px;
             }
         }
         &_new{
@@ -312,6 +311,7 @@ header {
     
         }
     }
+
       
       
 //SECTION - FOOTER    
@@ -337,3 +337,5 @@ header {
             margin-left: 10px
         }
     }
+
+  
