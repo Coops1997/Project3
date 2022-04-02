@@ -213,9 +213,7 @@ header {
   }
     
     .restaurants{
-        width: 100%;
-        margin-top: 25px;
-        padding: $padding-main;
+        padding: 1.2rem;
         background: $backgroung-color-2;
 
         h2{
@@ -237,10 +235,8 @@ header {
                 flex-direction: column;
                 text-decoration: none;
                 color: black;
-                margin: 2rem;
                 height: 250px;
-                width: 80%;
-                border: 0.1rem solid white;
+                width: 100%;
                 border-radius: 25px;
                 background-color: white;
                 justify-content: center;
@@ -262,9 +258,9 @@ header {
 
                     .fa-heart{
                         position: absolute;
-                        right: 2rem;
-                        bottom: 1,2rem;
-                        font-size: 1.3rem;
+                        right: 2.6rem;
+                        margin-top: 10rem;
+                        font-size: 2rem;
                         z-index: 5px;
                         &.empty{
                             color:white;
@@ -300,7 +296,7 @@ header {
             }
         }
         &_new{
-            position: relative;
+            position: absolute;
             right: 0.8rem;
             top: 0.8rem;
             background-color: green;
