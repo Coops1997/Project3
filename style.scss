@@ -313,3 +313,136 @@ header {
     }
 
   
+
+    /*pages*/
+
+    body{
+        width:100%;
+    }
+     
+    header{
+        display: flex;
+        flex-direction: row;
+    
+        .top-links{
+            padding: 1rem;
+        }
+
+        i{
+            align-items: left;
+            padding: 1rem;
+        }
+    
+        #Logo_Box{
+            width: 100%;
+        }
+    
+        .Logo{
+            height: 30px;
+            align-items: center;
+            padding: 0.8rem;
+        }
+    }
+
+        #Full_palette{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .res1{
+            width: 420px;
+            height: 250px;
+        }
+
+
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu{
+        padding: 1rem;
+        margin: 1.2rem;
+    }
+
+    .restaurant{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .restaurant-name{
+        text-align: left;
+        padding: 0.2rem;
+    }
+
+    .fa-heart{
+        position: relative;
+        padding: 1.2rem;
+        font-size: 2rem;
+        &.empty{
+            color:white;
+        }
+        &.full{
+            opacity: red;
+        }
+        &.empty:hover{
+            cursor: auto;
+            color: red;
+        }
+        &.full:hover{
+            cursor: auto;
+            color: magenta;
+            background:white;
+            background-clip: padding-box;
+            transition: width 2s;
+            opacity: 4px;
+            }
+    }
+
+    .menu-section{
+        padding: 0.4rem;
+        margin: 0.2rem;
+    }
+
+    h3{
+        align-items: left;
+    }
+
+    .menu-wrap{
+        margin: 0;
+    }
+
+    .dish-one{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        border: 1px solid grey;
+    }
+
+    .dish-text{
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    h3{
+        font-weight: bold;
+    }
+
+    p{
+        font-size: small;
+        font-weight: 200;
+    }
+
+    .dish-price{
+        text-align: right;
+    }
+
+    .dish-check{
+
+    }
+
+    i{
+
+    }
