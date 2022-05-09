@@ -352,10 +352,70 @@ h3 {
 }
 
 .menu-wrap {
-  margin: 0;
+  margin: 1rem;
 }
 
 .dish-one {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  border: 1px solid grey;
+}
+
+.dish-text {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  font-size: small;
+  font-weight: 200;
+}
+
+.dish-price {
+  text-align: right;
+}
+
+h4 {
+  align-items: right;
+  margin: 2rem;
+}
+
+.dish-check {
+  align-items: right;
+  padding: 1rem;
+}
+
+.dish-two {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  border: 1px solid grey;
+}
+
+.dish-text {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  font-size: small;
+  font-weight: 200;
+}
+
+.dish-price {
+  text-align: right;
+}
+
+.dish-three {
   display: flex;
   flex-direction: row;
   text-align: left;
