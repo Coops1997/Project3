@@ -287,53 +287,49 @@ header .Logo {
   padding: 0.8rem;
 }
 
-#Full_palette {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.res1 {
-  width: 420px;
-  height: 250px;
-}
-
 main {
   display: flex;
   flex-direction: column;
 }
+main #Full_palette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .res1 {
+  width: 420px;
+  height: 250px;
+}
 
-.menu {
+section {
+  padding: 1rem;
+}
+section .menu {
+  display: flex;
+  flex-direction: row;
   padding: 1rem;
   margin: 1.2rem;
 }
-
-.restaurant {
-  display: flex;
-  flex-direction: row;
-}
-
-.restaurant-name {
+section .restaurant_name {
   text-align: left;
   padding: 0.2rem;
 }
-
-.fa-heart {
+section .fa-heart {
   position: relative;
   padding: 1.2rem;
   font-size: 2rem;
 }
-.fa-heart.empty {
+section .fa-heart.empty {
   color: white;
 }
-.fa-heart.full {
+section .fa-heart.full {
   opacity: red;
 }
-.fa-heart.empty:hover {
+section .fa-heart.empty:hover {
   cursor: auto;
   color: red;
 }
-.fa-heart.full:hover {
+section .fa-heart.full:hover {
   cursor: auto;
   color: magenta;
   background: white;
@@ -342,27 +338,26 @@ main {
   opacity: 4px;
 }
 
-.menu-section {
-  padding: 0.4rem;
-  margin: 0.2rem;
+.menu_section {
+  background-color: #f5f5f5;
+  padding: 50px 20px 35px 20px;
 }
 
-h3 {
-  align-items: left;
+.menu_subheading {
+  margin-bottom: 20px;
 }
 
-.menu-wrap {
-  margin: 1rem;
-}
-
-.dish-one {
+.dishes {
+  background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: left;
-  border: 1px solid grey;
+  padding: 0;
+  margin-bottom: 30px;
+  border-radius: 15px;
 }
 
-.dish-text {
+.dish_text {
   text-align: left;
   padding: 0.5rem;
 }
@@ -376,7 +371,7 @@ p {
   font-weight: 200;
 }
 
-.dish-price {
+.dish_price {
   text-align: right;
 }
 
@@ -385,57 +380,7 @@ h4 {
   margin: 2rem;
 }
 
-.dish-check {
+.dish_check {
   align-items: right;
   padding: 1rem;
-}
-
-.dish-two {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  border: 1px solid grey;
-}
-
-.dish-text {
-  text-align: left;
-  padding: 0.5rem;
-}
-
-h3 {
-  font-weight: bold;
-}
-
-p {
-  font-size: small;
-  font-weight: 200;
-}
-
-.dish-price {
-  text-align: right;
-}
-
-.dish-three {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  border: 1px solid grey;
-}
-
-.dish-text {
-  text-align: left;
-  padding: 0.5rem;
-}
-
-h3 {
-  font-weight: bold;
-}
-
-p {
-  font-size: small;
-  font-weight: 200;
-}
-
-.dish-price {
-  text-align: right;
 }/*# sourceMappingURL=style.css.map */
