@@ -344,6 +344,10 @@ header {
         }
     }
 
+    main{
+        display: flex;
+        flex-direction: column;
+    
         #Full_palette{
             display: flex;
             flex-direction: column;
@@ -355,24 +359,19 @@ header {
             height: 250px;
         }
 
-
-
-    main{
-        display: flex;
-        flex-direction: column;
     }
 
+section{
+    padding: 1rem;
+    
     .menu{
+        display: flex;
+        flex-direction: row;
         padding: 1rem;
         margin: 1.2rem;
     }
 
-    .restaurant{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .restaurant-name{
+    .restaurant_name{
         text-align: left;
         padding: 0.2rem;
     }
@@ -400,28 +399,28 @@ header {
             opacity: 4px;
             }
     }
+}
 
-    .menu-section{
-        padding: 0.4rem;
-        margin: 0.2rem;
+    .menu_section{
+        background-color: #f5f5f5;
+        padding: 50px 20px 35px 20px;
     }
 
-    h3{
-        align-items: left;
+    .menu_subheading{
+        margin-bottom: 20px;
     }
 
-    .menu-wrap{
-        margin: 1rem;
-    }
-
-    .dish-one{
+    .dishes{
+        background-color: white;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         text-align: left;
-        border: 1px solid grey;
+        padding: 0;
+        margin-bottom: 30px;
+        border-radius: 15px;
     }
 
-    .dish-text{
+    .dish_text{
         text-align: left;
         padding: 0.5rem;
     }
@@ -435,7 +434,7 @@ header {
         font-weight: 200;
     }
 
-    .dish-price{
+    .dish_price{
         text-align: right;
     }
 
@@ -444,77 +443,8 @@ header {
         margin: 2rem;
     }
 
-    .dish-check{
+    .dish_check{
         align-items: right;
         padding: 1rem;
     }
 
-    i{
-
-    }
-
-    .dish-two{
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        border: 1px solid grey;
-    }
-
-    .dish-text{
-        text-align: left;
-        padding: 0.5rem;
-    }
-
-    h3{
-        font-weight: bold;
-    }
-
-    p{
-        font-size: small;
-        font-weight: 200;
-    }
-
-    .dish-price{
-        text-align: right;
-    }
-
-    .dish-check{
-
-    }
-
-    i{
-
-    }
-
-    .dish-three{
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        border: 1px solid grey;
-    }
-
-    .dish-text{
-        text-align: left;
-        padding: 0.5rem;
-    }
-
-    h3{
-        font-weight: bold;
-    }
-
-    p{
-        font-size: small;
-        font-weight: 200;
-    }
-
-    .dish-price{
-        text-align: right;
-    }
-
-    .dish-check{
-
-    }
-
-    i{
-
-    }
