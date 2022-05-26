@@ -11,11 +11,15 @@ body {
 }
 
 header {
-  padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 0 4px 0;
 }
 header #logo_Box {
   width: 100%;
+  height: auto;
 }
 header .logo {
   height: 30px;
@@ -24,8 +28,11 @@ header .logo {
 }
 header #location {
   width: 100%;
-  border: 1px solid white;
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  justify-content: center;
+  padding: 5px 0;
 }
 header #location i {
   display: flex;
@@ -40,13 +47,12 @@ header #location i p {
 header #intro {
   display: flex;
   flex-direction: column;
-  background-color: rgb(236, 228, 228);
+  background-color: #f5f5f5;
+  width: 100%;
 }
 header .intro_title {
   padding: 20px;
-  align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  text-align: center;
 }
 header .intro_heading {
   padding: 10px;
@@ -61,38 +67,51 @@ header p {
 header #explore_button {
   display: flex;
   flex-flow: row;
-  padding: 10px;
+  padding: 16px 27px;
   text-align: center;
   justify-content: center;
 }
 header .button {
+  background-image: gradient(linear, left top, left bottom, from(#FF79DA), to #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   width: 70%;
   height: 60px;
   text-align: center;
   margin-bottom: 1.6rem;
-  border-radius: 50px;
-  background-color: rgb(168, 73, 168);
+  border-radius: 30px;
+  border: none;
   color: white;
+}
+header .button:hover {
+  background-image: gradient(linear, left top, left bottom, from(#FF79DA), to #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 .how-it-works {
-  padding: 5px;
+  padding: 1rem;
 }
 .how-it-works h2 {
   padding: 0.4rem 1.2rem;
 }
-.how-it-works.wrap {
+.how-it-works .wrap {
   display: flex;
   flex-direction: column;
 }
+.how-it-works .step {
+  background-color: #F5F5F5;
+  border-radius: 23px;
+  border: none;
+  padding: 27px;
+  margin-left: 10px;
+  margin-bottom: 28px;
+  align-items: center;
+}
 .how-it-works .numbers {
-  width: 1.5rem;
-  height: 1.5rem;
-  text-align: center;
-  background: magenta;
-  color: white;
-  border-radius: 2rem;
   position: absolute;
+  text-align: center;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 100%;
 }
 .how-it-works .icon {
   width: 1.5rem;
@@ -112,64 +131,30 @@ header .button {
   background-color: magenta;
 }
 
-.choose_element {
-  border: 1px solid #0a0a0a;
-  background-color: rgb(226, 221, 221);
-  min-height: 70px;
-  width: 90%;
-  border-radius: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-}
-
-.create_element {
-  border: 1px solid #0a0a0a;
-  background-color: rgb(226, 221, 221);
-  min-height: 70px;
-  width: 90%;
-  border-radius: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-}
-
-.enjoy_element {
-  border: 1px solid #0a0a0a;
-  background-color: rgb(226, 221, 221);
-  min-height: 70px;
-  width: 90%;
-  border-radius: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-}
-
 section {
   text-align: left;
   align-items: center;
 }
 
 .restaurants {
-  padding: 0.8rem;
-  background: lightgrey;
+  padding: 10px;
+  background: #f5f5f5;
 }
 .restaurants h2 {
   padding: 1rem;
+  margin-bottom: 23px;
 }
 .restaurants h4 {
   font-weight: normal;
 }
-.restaurants.wrap {
+.restaurants .wrap {
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
 }
-.restaurants.card {
-  position: relative;
+.restaurants._card {
+  display: flex;
+  flex-direction: column;
 }
 .restaurants a {
   display: flex;
@@ -243,10 +228,10 @@ section {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(95, 81, 81);
+  padding: 15px;
+  background-color: #3a3a3a;
   color: white;
+  height: 200px;
 }
 footer .Logo {
   align-items: left;
@@ -256,7 +241,7 @@ footer .Logo {
 }
 footer ul {
   list-style-type: none;
-  padding: 10px;
+  padding: 0px;
   margin-bottom: 10px;
   margin-top: 0;
   margin-left: 10px;
@@ -351,10 +336,6 @@ section .fa-heart.full:hover {
   background-color: white;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding: 0;
-  margin-bottom: 30px;
-  border-radius: 15px;
 }
 
 .dish_text {
