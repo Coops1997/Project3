@@ -83,6 +83,8 @@ main .button {
 main .button:hover {
   background-image: gradient(linear, left top, left bottom, from(#FF79DA), to #9356DC);
   background-image: linear-gradient(#FF79DA, #9356DC);
+  transform: scale(1.15);
+  transition-duration: 6s;
 }
 
 .how-it-works {
@@ -122,18 +124,17 @@ main .button:hover {
   width: 1.5rem;
   margin: 0 1.6rem 0 2rem;
   padding: 0rem;
-  color: #767676;
+  color: #9356DC;
   font-size: 20px;
 }
-.how-it-works h4 {
-  font-weight: 500;
-}
-.how-it-works :hover {
-  background-color: lighten magenta, 40%;
-  cursor: pointer;
+.how-it-works .icon :hover {
+  transform: scale(2.15);
+  transition-property: transform;
+  transition-duration: 4s;
+  transform: rotate(360deg);
 }
 .how-it-works :hover > .icon {
-  color: magenta;
+  color: #FF79DA;
 }
 
 section {
@@ -193,39 +194,103 @@ section {
 
 .heart {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   position: absolute;
   right: 6%;
-  bottom: 25px;
-  font-size: 24px;
+  font-size: 34px;
   height: 33px;
   width: 40px;
-  background-color: transparent;
   border: none;
+  margin-top: -40px;
+  color: white;
+}
+.heart:hover {
+  -webkit-animation: beat 1s infinite;
+          animation: beat 1s infinite;
+}
+@-webkit-keyframes beat {
+  50% {
+    transform: scale(1.5);
+  }
+}
+@keyframes beat {
+  50% {
+    transform: scale(1.5);
+  }
 }
 .heart .far {
   display: inline-block;
   color: black;
 }
 .heart .fas {
-  position: relative;
-  bottom: 24px;
-  font-size: 24px;
-  color: transparent;
+  position: absolute;
+  font-size: 34px;
+}
+.heart:hover {
+  transform: scale(1.25);
+  transition-property: transform;
+  transition-duration: 8s;
+  color: #FF79DA;
 }
 
 .new {
   position: absolute;
-  right: 9%;
+  right: 8%;
   width: 80px;
-  top: 1100px;
   background-color: #99E2D0;
   color: #278870;
   padding: 5px 0;
   border-radius: 3px;
   text-align: center;
+  margin-top: -235px;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 120s, visibility 2s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #278870;
+  border-radius: 50%;
+  -webkit-animation: loading 0.75s ease infinite;
+          animation: loading 0.75s ease infinite;
+}
+
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 footer {
   padding: 15px;
   background-color: #3a3a3a;
@@ -304,18 +369,6 @@ section .menu {
 section .restaurant_name {
   text-align: left;
   padding: 0.2rem;
-}
-section .heart {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 6%;
-  bottom: 25px;
-  font-size: 24px;
-  height: 33px;
-  width: 40px;
-  background-color: transparent;
-  border: none;
 }
 
 .menu_section {
