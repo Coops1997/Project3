@@ -254,7 +254,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #333333;
+  background: #99E2D0;
   transition: opacity 120s, visibility 2s;
 }
 
@@ -268,7 +268,7 @@ section {
   width: 75px;
   height: 75px;
   border: 15px solid #dddddd;
-  border-top-color: #278870;
+  border-top-color: #9356DC;
   border-radius: 50%;
   -webkit-animation: loading 0.75s ease infinite;
           animation: loading 0.75s ease infinite;
@@ -339,6 +339,7 @@ header #Logo_Box {
 }
 header .Logo {
   height: 30px;
+  margin-left: 50px;
   align-items: center;
   padding: 0.8rem;
 }
@@ -358,69 +359,121 @@ main .res1 {
 }
 
 section {
-  padding: 1rem;
+  padding: 0;
 }
 section .menu {
   display: flex;
   flex-direction: row;
-  padding: 1rem;
+  padding: 0;
   margin: 1.2rem;
 }
-section .restaurant_name {
+section .menu_heading {
   text-align: left;
   padding: 0.2rem;
 }
-
-.menu_section {
-  background-color: #f5f5f5;
-  padding: 50px 20px 35px 20px;
+section .heart {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  right: 6%;
+  font-size: 34px;
+  height: 33px;
+  width: 40px;
+  border: none;
+  margin-top: 20px;
+  background-color: white;
+  color: white;
+}
+section .far {
+  display: inline-block;
+  color: black;
+}
+section .fas {
+  position: absolute;
+  font-size: 34px;
 }
 
-.menu_subheading {
+.menu__sections {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+.menu__sections .menu__subheading {
+  padding: 0;
   margin-bottom: 20px;
 }
-
-.dishes {
+.menu__sections .dishes {
   background-color: white;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
-
-.dish_text {
+.menu__sections .card__description {
   text-align: left;
   padding: 0.5rem;
 }
-
-h3 {
+.menu__sections h2 {
   font-weight: bold;
 }
-
-p {
+.menu__sections p {
   font-size: small;
   font-weight: 200;
 }
-
-.dish_price {
-  text-align: right;
+.menu__sections .card__price {
+  right: 20%;
+  margin-top: -60px;
+  position: absolute;
+}
+.menu__sections .checkbox {
+  background-color: #278870;
+  width: 17%;
+  height: 67.1px;
+  position: absolute;
+  bottom: o;
+  right: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__sections .checkbox i {
+  color: white;
+  font-size: 20px;
+}
+.menu__sections:hover .card__description {
+  width: 65%;
+}
+.menu__sections:hover .card__price {
+  transform: translateX(-160%);
+}
+.menu__sections:hover .checkbox {
+  display: flex;
+  -webkit-animation-name: dishAdded;
+          animation-name: dishAdded;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.menu__sections:hover .checkbox i {
+  -webkit-animation: 0.3s linear 0s rotateIcon;
+          animation: 0.3s linear 0s rotateIcon;
 }
 
-h4 {
-  align-items: right;
-  margin: 2rem;
-}
-
-.dish_check {
-  align-items: right;
-  padding: 1rem;
-}
-
-.order_button {
+.btn {
   background-image: gradient(linear, left top, left bottom, from(#FF79DA), to #9356DC);
   background-image: linear-gradient(#FF79DA, #9356DC);
-  width: 70%;
+  width: 100%;
   height: 60px;
   text-align: center;
+  align-items: center;
   margin-bottom: 1.6rem;
   border-radius: 30px;
   border: none;
