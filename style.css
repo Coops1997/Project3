@@ -320,22 +320,27 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.header__icon {
+  font-size: 20px;
+  position: absolute;
+  left: 0%;
+  color: black;
+}
+.header__icon i {
+  justify-content: left;
+  padding: 1.6rem;
+}
+
+.Logo {
+  display: flex;
+  margin-left: 450px;
   flex-direction: row;
-}
-header .top-links {
-  justify-content: left;
-  padding: 1rem;
-}
-header i {
-  justify-content: left;
-  padding: 1rem;
-}
-header .Logo {
-  height: 30px;
   justify-content: center;
-  padding: 0.8rem;
 }
 
 main {
@@ -348,39 +353,47 @@ main #Full_palette {
   align-items: center;
 }
 main .res1 {
-  width: 100%;
-  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+  z-index: 1;
 }
 
-section {
-  padding: 0;
-}
-section .menu {
+.menu {
+  background-color: #f5f5f5;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+  top: 200px;
+  z-index: 2;
+  padding: 35px 16px;
   display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 1.2rem;
+  flex-flow: column wrap;
+  margin-bottom: 200px;
 }
-section .menu__heading {
-  text-align: left;
-  padding: 20px;
-  margin-left: 20px;
+.menu__heading {
+  font-size: 27px;
+  margin-bottom: 30px;
+  padding: 12px;
+  margin-left: 10px;
 }
-section .Heart {
+.menu .Heart {
   display: flex;
   flex-flow: column;
   background-color: transparent;
-  opacity: 50;
   position: absolute;
   right: 6%;
+  top: 41px;
   font-size: 32px;
-  height: 33px;
+  height: 32px;
   width: 40px;
   border: none;
   margin-top: 32px;
   color: white;
 }
-section .Heart:hover {
+.menu .Heart:hover {
   -webkit-animation: beat 1s infinite;
           animation: beat 1s infinite;
 }
@@ -389,84 +402,56 @@ section .Heart:hover {
     transform: scale(1.5);
   }
 }
-section .Heart .far {
+.menu .Heart .far {
   display: inline-block;
   color: black;
 }
-section .Heart .fas {
+.menu .Heart .fas {
   position: absolute;
   font-size: 32px;
 }
-section .Heart:hover {
+.menu .Heart:hover {
   transform: scale(1.25);
   transition-property: transform;
   transition-duration: 8s;
   color: #FF79DA;
 }
-
 .menu__sections {
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
   padding: 30px;
 }
-.menu__sections .menu__subheading {
-  padding: 0;
-  font-size: 20px;
-  margin-bottom: 20px;
+.menu__subheading {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 5px;
 }
-.menu__sections .dishes {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  height: 320px;
-  width: 100%;
-}
-.menu__sections .card__description {
-  margin-bottom: 28px;
-  text-align: left;
-  padding: 0.5rem;
-}
-.menu__sections h2 {
-  font-weight: bold;
-}
-.menu__sections p {
-  font-size: small;
-  font-weight: 200;
-}
-.menu__sections .card__price {
-  right: 28%;
-  margin-top: -60px;
-  position: absolute;
-}
-.menu__sections .checkbox {
+.menu__subheading--line {
+  width: 40px;
+  border: 1.5px solid #278870;
+  margin-bottom: 15px;
   background-color: #278870;
-  width: 12%;
-  height: 72.1px;
-  position: absolute;
-  right: 30px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -110px;
-  display: none;
+}
+
+.dishes {
+  padding: 0px;
+}
+.dishes__card {
+  background-color: white;
+  margin-bottom: 28px;
+  border-radius: 15px;
+  width: 100%;
+  height: 77px;
   padding: 10px;
 }
-.menu__sections .checkbox i {
-  color: white;
-  font-size: 20px;
-}
-.menu__sections :hover .card__description {
+.dishes__card :hover .card__description {
   width: 65%;
 }
-.menu__sections :hover .card__price {
+.dishes__card :hover .card__price {
   transform: translateX(-160%);
 }
-.menu__sections :hover .checkbox {
+.dishes__card :hover .checkbox {
   display: flex;
   -webkit-animation-name: dishAdded;
           animation-name: dishAdded;
@@ -479,9 +464,58 @@ section .Heart:hover {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.menu__sections :hover .checkbox i {
+.dishes__card :hover .checkbox i {
   -webkit-animation: 0.3s linear 0s rotateIcon;
           animation: 0.3s linear 0s rotateIcon;
+}
+.dishes .card__description {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  align-self: flex-end;
+  padding: 2px;
+}
+.dishes .card__description h2 {
+  font-weight: bold;
+}
+.dishes .card__description p {
+  font-size: small;
+  font-weight: 200;
+}
+.dishes .card__price {
+  font-weight: 500;
+  font-size: 14.5px;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 15px;
+  padding: 0px;
+  margin-right: 10px;
+  position: relative;
+  left: 87%;
+  bottom: 50px;
+  display: inline-block;
+  transform: translateX(0);
+  transition-duration: 500ms;
+}
+.dishes .checkbox {
+  background-color: #278870;
+  width: 12%;
+  height: 94px;
+  position: relative;
+  left: 89%;
+  bottom: 138px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.dishes .checkbox i {
+  color: white;
+  font-size: 20px;
 }
 
 .btn {
