@@ -14,13 +14,14 @@ body {
 
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     padding: 5px;
     
     .logo {
         width: 100%;
         height: 30px;
+        justify-content: center;
       }
       
     }
@@ -51,32 +52,29 @@ main{
         
       }
 
-      #intro{
+      .intro{
           display:flex;
           flex-direction: column;
           background-color: #f5f5f5;
           width: 100%;
-      }
 
-      .intro_title{
+      &__title{
           padding: 20px;
           text-align: center;
           }
 
-      .intro_heading{
+      &__heading{
           padding:10px;
           margin-left: 55px;
           margin-right: 55px;
           align-items: center;
           font-size: 18px;
           font-weight: 300;
-      }
-
-      p{
           text-align-last: center;
       }
+    }
 
-      #explore_button{
+      .explore__button{
           display: flex;
           flex-flow: row;
           padding: 16px 27px;
@@ -103,8 +101,8 @@ main{
         transition-duration: 6s;
       }
 
-    
-  }
+      }
+  
   
  
     
@@ -343,11 +341,17 @@ main{
       
 //SECTION - FOOTER    
 
-    footer{
+    .footer{
         padding: 15px;
         background-color: #3a3a3a;
         color: white;
         height: 200px;
+    
+
+        &__heading{
+            font-size: 25px;
+            margin-left: 10px;
+        }
 
         a{
             color:white;
@@ -355,15 +359,10 @@ main{
         }
 
         i{
-            padding: 10px;
+            padding: 0px;
+            margin-right: 8px;
         }
     
-        .Logo{
-            align-items: left;
-            max-width: 120px;
-            max-height: 150px;
-            margin: 20px;
-        }
     
         ul{
             list-style-type: none;
@@ -385,7 +384,8 @@ main{
     .header{
         display: flex;
         flex-direction:  column;
-        margin: 20px;
+        margin: 30px;
+        
      
         &__icon {
            font-size: 20px;
@@ -395,17 +395,11 @@ main{
         
         i{
             justify-content: left;
-            padding: 1.6rem;
+            padding: 5px;
+            margin-left: 5px;
          }
     }
-}
-
-    .Logo{
-        display: flex;
-        margin-left: 450px;
-        flex-direction: row;
-        justify-content: center;
-    }    
+}   
  
 
     main{
@@ -529,6 +523,7 @@ main{
         width: 100%;
         height: 77px;
         padding: 10px;
+        text-decoration: none;
     
 
     & :hover {
@@ -564,14 +559,19 @@ main{
             width: 100%;
             align-self: flex-end;
             padding: 2px;
+            text-decoration: none;
             
         h2{
            font-weight: bold;
+           color: black;
+           text-decoration: none;
         }
 
     p{
         font-size: small;
         font-weight: 200;
+        color: black;
+        text-decoration: none;
     }
 }
 
