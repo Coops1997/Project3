@@ -461,6 +461,9 @@ main .res1 {
   -webkit-animation: 0.3s linear 0s rotateIcon;
           animation: 0.3s linear 0s rotateIcon;
 }
+
+a, a:link, a:visited, a:hover, a:active{ text-decoration: none; }
+
 .dishes .card__description {
   display: flex;
   flex-flow: column nowrap;
